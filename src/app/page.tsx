@@ -4,11 +4,14 @@ import { QualifierDemo } from '@/components/ggi/QualifierDemo'
 const offers = [
   'Smart websites that help people inquire, book, register, or buy',
   'Interactive qualifiers that recommend the right service before the first call',
+  'WhatsApp and Telegram messaging worlds that keep people connected after they respond',
   'Follow-up systems that keep leads and opportunities from falling through the cracks',
 ]
 
 const packages = [
   { name: 'LaunchSite', price: '$500+', description: 'A clean website or landing page built to move visitors toward action.' },
+  { name: 'Event LaunchPage', price: '$199+', description: 'A quick-turnaround landing page for events, registration, RSVP, and promotion.' },
+  { name: 'Messaging World', price: '$500+', description: 'A WhatsApp or Telegram community hub for updates, resources, onboarding, and engagement.' },
   { name: 'Smart Qualifier', price: '$1,500+', description: 'An interactive recommendation tool that helps qualify better leads.' },
   { name: 'System Build', price: '$3,500+', description: 'A website connected to forms, follow-up, messaging, or dashboard workflows.' },
 ]
@@ -30,9 +33,9 @@ export default function Home() {
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">GGI Solutions</p>
-            <h1 className="mt-6 text-5xl font-black tracking-tight sm:text-7xl">Websites that qualify leads and move people to action.</h1>
+            <h1 className="mt-6 text-5xl font-black tracking-tight sm:text-7xl">Smart websites and messaging systems that move people to action.</h1>
             <p className="mt-6 text-lg leading-8 text-zinc-300">
-              We build simple, smart, interactive websites for businesses, churches, nonprofits, events, and organizations that need more than a digital flyer.
+              We build simple, interactive websites, event pages, WhatsApp/Telegram messaging worlds, and follow-up systems for organizations that need more than a digital flyer.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a href="#interactive" className="rounded-xl bg-amber-300 px-6 py-3 font-bold text-zinc-950 hover:bg-amber-200">Try the Interactive Demo</a>
@@ -42,7 +45,7 @@ export default function Home() {
 
           <div className="rounded-[2rem] border border-amber-300/30 bg-amber-300/10 p-6">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-200">What makes this different?</p>
-            <h2 className="mt-4 text-3xl font-bold">Your site should help sell before you ever get on the phone.</h2>
+            <h2 className="mt-4 text-3xl font-bold">Your site should start the relationship, not end it.</h2>
             <ul className="mt-6 space-y-4 text-zinc-200">
               {offers.map((offer) => (
                 <li key={offer} className="flex gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-amber-300" />{offer}</li>
@@ -56,7 +59,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">Interactive Demo</p>
           <h2 className="mt-5 max-w-3xl text-4xl font-bold">Answer a few questions and get matched with the right solution.</h2>
-          <p className="mt-5 max-w-3xl text-zinc-300">This is the kind of interactive experience GGI Solutions can build for your organization.</p>
+          <p className="mt-5 max-w-3xl text-zinc-300">This is the kind of adaptive experience GGI Solutions can build for your organization. The system stays the same, but the language fits your world.</p>
           <div className="mt-10">
             <QualifierDemo />
           </div>
@@ -66,7 +69,7 @@ export default function Home() {
       <section id="offers" className="mx-auto max-w-6xl px-6 py-20">
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">Simple Offers</p>
         <h2 className="mt-5 max-w-3xl text-4xl font-bold">Start with the build that fits where you are.</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {packages.map((pkg) => (
             <div key={pkg.name} className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
               <h3 className="text-xl font-bold">{pkg.name}</h3>
@@ -75,6 +78,10 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <section className="mt-10 rounded-3xl border border-amber-300/30 bg-amber-300/10 p-8">
+          <h3 className="text-2xl font-bold">The natural flow</h3>
+          <p className="mt-4 max-w-3xl text-zinc-300">A website or event page captures attention. A qualifier finds the need. A WhatsApp or Telegram messaging world keeps people connected. A follow-up system makes sure nobody gets missed.</p>
+        </section>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link href="/contact" className="rounded-xl bg-amber-300 px-6 py-3 font-bold text-zinc-950 hover:bg-amber-200">Request a Quote</Link>
           <Link href="/services" className="rounded-xl border border-white/15 px-6 py-3 font-semibold hover:border-white/40">View All Services</Link>
