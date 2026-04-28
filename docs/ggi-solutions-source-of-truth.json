@@ -1,0 +1,281 @@
+{
+  "company": {
+    "name": "GGI Solutions",
+    "type": "digital systems and people-development company",
+    "core_positioning": "GGI Solutions builds simple digital systems that help people move forward.",
+    "expanded_positioning": "GGI Solutions builds interactive websites, event pages, messaging worlds, follow-up systems, smart qualifiers, and growth development tools for organizations that want people to feel seen, guided, and supported.",
+    "brand_promise": "Systems that move people forward.",
+    "founder_heart": "Developing people and helping them become who God designed them to be.",
+    "internal_mission": "GGI Solutions exists to understand how people are wired and build systems that help them grow, connect, and move toward purpose.",
+    "public_mission": "GGI Solutions builds smart digital systems that help organizations understand people, guide growth, improve follow-up, and move people toward their next best step.",
+    "core_phrases": [
+      "Walk in purpose",
+      "Fresh 24",
+      "There is purpose in your pain",
+      "Embrace the process",
+      "Walk it out",
+      "Don't stop. Get it, get it"
+    ],
+    "faith_foundation": {
+      "guide": "The Bible is the guide and Jesus' way of life shapes the company culture.",
+      "expression": "The company should live the values more than force beliefs in public language.",
+      "heart_text": "Acts 2:42-47",
+      "acts_2_42_47_themes": [
+        "teaching",
+        "fellowship",
+        "shared life",
+        "prayer",
+        "generosity",
+        "consistency",
+        "growth",
+        "multiplication"
+      ]
+    }
+  },
+  "brand_design": {
+    "desired_feel": [
+      "Apple-inspired simplicity",
+      "premium",
+      "clean",
+      "high contrast",
+      "trustworthy",
+      "happy",
+      "caring",
+      "modern"
+    ],
+    "current_palette": {
+      "background": "deep black / midnight",
+      "primary_accent": "blue / cyan",
+      "secondary_accent": "purple",
+      "text": "white and light gray"
+    },
+    "design_direction": "Simple, spacious, readable, premium, and interactive. The visitor should feel like GGI Solutions understands and cares about them."
+  },
+  "core_strategy": {
+    "simple_site_goal": "Make people want to buy by letting them interact with the site, identify their need, and receive a helpful recommendation.",
+    "buyer_journey": [
+      "Tell us what industry you are in",
+      "Tell us what you need",
+      "Get matched with the right solution",
+      "Request a quote or start a project"
+    ],
+    "water_principle": "Same system. Different language. Same heart.",
+    "industry_adaptation": {
+      "principle": "The system does not change. The wording changes to match the buyer's world.",
+      "industries": {
+        "church": ["visitors", "discipleship", "care", "prayer", "serving", "members", "leadership"],
+        "business_corporate": ["leads", "customers", "sales", "operations", "conversion", "staff", "revenue"],
+        "nonprofit": ["participants", "volunteers", "donors", "mission", "support", "impact"],
+        "school_youth": ["students", "parents", "mentors", "attendance", "character", "progress", "readiness"],
+        "creator_coach": ["clients", "members", "audience", "offers", "content", "accountability", "community"]
+      }
+    }
+  },
+  "launch_stack": {
+    "code_home": "GitHub",
+    "production_host": "Vercel",
+    "domain_dns": "Hostinger",
+    "business_operations": "Google Workspace / Google Forms / Google Sheets / Google Drive / Google Calendar",
+    "ai_lab": "Google AI Studio / Gemini",
+    "experiments": "Replit",
+    "analytics": "Google Analytics and Google Search Console",
+    "decision": "Use the current Next.js site in GitHub and deploy through Vercel. Use Hostinger for domain/DNS. Use Google for business operations. Do not rebuild the public website in Google AI Studio, Replit, Hostinger Builder, or Google Sites unless there is a specific business reason."
+  },
+  "live_site": {
+    "current_url": "https://ggi-app-starter.vercel.app",
+    "status": "Live on Vercel",
+    "next_steps": [
+      "Connect custom domain through Hostinger",
+      "Create or connect project inquiry form",
+      "Add analytics",
+      "Continue improving the interactive qualifier",
+      "Launch publicly and start taking inquiries"
+    ]
+  },
+  "public_site_policy": {
+    "no_public_login_required": true,
+    "reason": "Visitors should not need an account to view services, use the qualifier, request a quote, or contact GGI Solutions.",
+    "auth_policy": "Auth is only for possible admin/internal dashboard later, not for the public buyer journey."
+  },
+  "products": {
+    "cash_engine": {
+      "description": "Quick-turnaround offers that generate revenue now and create relationships for larger systems work.",
+      "offers": {
+        "basic_websites": {
+          "name": "LaunchSite",
+          "starting_price": "$500+",
+          "turnaround": "3-7 days after content is received",
+          "positioning": "A clean website or landing page built to help visitors understand and respond."
+        },
+        "event_landing_pages": {
+          "name": "Event LaunchPage",
+          "starting_price": "$199+",
+          "turnaround": "24-72 hours after content is received",
+          "positioning": "A quick-turnaround landing page for events, registration, RSVP, and promotion."
+        }
+      }
+    },
+    "core_revenue_offers": {
+      "smart_websites": {
+        "name": "LaunchSite Systems",
+        "description": "Websites and landing pages that act as digital front doors and move visitors toward action.",
+        "packages": [
+          {"name": "Starter LaunchSite", "price": "$500+"},
+          {"name": "Growth Website", "price": "$1,500+"},
+          {"name": "System Website", "price": "$3,500+"}
+        ]
+      },
+      "custom_qualifiers": {
+        "name": "Custom Qualifiers",
+        "starting_price": "$1,500+",
+        "positioning": "Turn your website into a salesperson.",
+        "description": "Interactive website experiences that ask questions, recommend services, and pre-qualify leads."
+      },
+      "messaging_worlds": {
+        "name": "Messaging World Builds",
+        "starting_price": "$500+",
+        "platforms": ["WhatsApp", "Telegram"],
+        "positioning": "Private mobile-first messaging worlds that help organizations communicate, onboard, organize, and engage their people.",
+        "note": "The niche is not Telegram only and not WhatsApp only. The niche is Messaging World Builds."
+      },
+      "follow_up_systems": {
+        "name": "Follow-Up Systems",
+        "starting_price": "$149/month+",
+        "positioning": "Stop letting people fall through the cracks.",
+        "audiences": ["businesses", "churches", "nonprofits", "schools", "programs", "events", "coaches", "creators"],
+        "use_cases": ["leads", "visitors", "clients", "participants", "volunteers", "donors", "event registrants", "parent inquiries"]
+      },
+      "system_builds": {
+        "name": "System Build",
+        "starting_price": "$3,500+",
+        "description": "A connected system with forms, follow-up, messaging, or simple dashboard workflows."
+      }
+    },
+    "development_ecosystem": {
+      "description": "The long-term people-development ecosystem that moves people from identity to growth to future leadership.",
+      "sequence": ["Free 2 Grow", "PurposePath OS", "GrowthPath OS", "LeaderRise OS"],
+      "big_idea": "Know who you are. Grow through what shaped you. Build toward who you are becoming. Help others grow.",
+      "free_2_grow": {
+        "audience": "kids and youth",
+        "positioning": "Helping kids grow with confidence, character, purpose, and support.",
+        "versions": ["Free 2 Grow Childcare", "Free 2 Grow Kids Ministry", "Free 2 Grow Youth", "Free 2 Grow School"]
+      },
+      "purposepath_os": {
+        "category": "Why-Driven Growth Development",
+        "positioning": "Discover your why. Understand your wiring. Grow through what tried to break you.",
+        "questions": [
+          "Who am I?",
+          "Why am I wired this way?",
+          "What shaped me?",
+          "What tried to break me?",
+          "What can I learn from it?",
+          "What is my next best step?"
+        ],
+        "guardrail": "PurposePath is not therapy, diagnosis, or clinical treatment. It is a coaching, reflection, growth, mentoring, and development system."
+      },
+      "growthpath_os": {
+        "positioning": "Turn scattered potential into clear growth paths.",
+        "purpose": "Turn identity and discovery into structured growth, support, and measurable progress."
+      },
+      "leaderrise_os": {
+        "positioning": "Identify. Develop. Multiply.",
+        "purpose": "Move people from personal growth into responsibility, service, future leadership, and multiplication.",
+        "sequence_rule": "Identity first. Growth second. Leadership third."
+      }
+    }
+  },
+  "human_wiring_database_thesis": {
+    "vision": "Build one of the largest structured databases on how people are wired, how they grow, what motivates them, what shapes them, and how different environments need to communicate with them.",
+    "public_language_guardrail": "Do not publicly lead with 'we are building a massive database on people.' Publicly say GGI Solutions helps organizations understand people better, communicate clearly, and guide growth with the right next steps.",
+    "core_questions": [
+      "What motivates this person?",
+      "How are they wired?",
+      "What shaped them?",
+      "What language connects with them?",
+      "What environment helps them grow?",
+      "What causes disengagement?",
+      "What type of support do they need?",
+      "What kind of follow-up works best?",
+      "What next step fits their current stage?",
+      "How do they move from identity to growth to leadership?"
+    ],
+    "data_categories": [
+      "identity_data",
+      "story_data",
+      "wiring_data",
+      "growth_data",
+      "engagement_data",
+      "environment_data"
+    ],
+    "ethical_guardrails": [
+      "Do not diagnose people",
+      "Do not claim clinical mental health authority",
+      "Do not exploit sensitive stories",
+      "Do not sell personal data carelessly",
+      "Use consent-based intake",
+      "Protect minors with extra care and adult consent",
+      "Use data to support growth, not label or limit people",
+      "Keep human review central"
+    ]
+  },
+  "site_features_built_or_planned": {
+    "built": [
+      "Homepage",
+      "Services page",
+      "Custom Qualifiers page",
+      "Solution Finder / Qualifier page",
+      "Industry-adaptive qualifier component",
+      "Event landing page template",
+      "Follow-Up System page",
+      "Contact page shell",
+      "Warm Apple-inspired design iteration",
+      "Black/blue/purple high-contrast design iteration"
+    ],
+    "planned": [
+      "Customer-service chatbot",
+      "Telegram lead notifications",
+      "Google Form or public contact form lead capture",
+      "Google Apps Script automation from form to Sheet to Telegram",
+      "Google Analytics and Search Console",
+      "Custom domain through Hostinger",
+      "Possible admin/internal dashboard later"
+    ]
+  },
+  "chatbot_and_notifications": {
+    "chatbot_goal": "A simple customer-service style chatbot that helps visitors understand services, choose the right path, and submit lead information.",
+    "telegram_goal": "Send Reno instant Telegram alerts when a qualified lead submits.",
+    "recommended_order": [
+      "Front-end chat widget with preset responses",
+      "Lead capture fields",
+      "Telegram notification integration",
+      "AI upgrade with Gemini or another model"
+    ],
+    "telegram_message_format": {
+      "title": "New GGI Solutions Lead",
+      "fields": ["Name", "Organization", "Industry", "Need", "Timeline", "Budget", "Contact", "Recommended Service", "Message"]
+    }
+  },
+  "google_apps_script_role": {
+    "include": true,
+    "role": "Automation glue, not the public website host.",
+    "first_workflow": "Google Form -> Google Sheet -> Apps Script -> Telegram alert + email confirmation",
+    "use_cases": [
+      "lead routing",
+      "Telegram alerts",
+      "Google Sheets updates",
+      "email confirmations",
+      "client intake automation",
+      "daily CEO digest",
+      "project folder creation"
+    ]
+  },
+  "operating_rules": [
+    "Launch first. Collect leads. Improve weekly.",
+    "Public visitors should never need to log in.",
+    "Do not overbuild before real demand.",
+    "Basic websites and event pages are allowed as quick-turnaround revenue services.",
+    "The website should be simple, interactive, and make people want to buy.",
+    "The system stays the same; the wording adapts to the industry.",
+    "People are the mission. Technology is the vehicle."
+  ]
+}
