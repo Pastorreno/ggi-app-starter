@@ -9,39 +9,80 @@ type Answers = {
   urgency: string
 }
 
-const recommendations = {
-  website: {
-    title: 'LaunchSite System',
-    summary: 'A clean website or landing page that gives your organization a professional front door and moves visitors toward action.',
-    package: 'Starter or Growth LaunchSite',
-    next: 'Request a website quote',
+type Recommendation = {
+  title: string
+  summary: string
+  package: string
+  next: string
+  demoLanguage: string
+}
+
+const industryLanguage: Record<string, { label: string; people: string; action: string; demo: string }> = {
+  business: {
+    label: 'Business / Corporate',
+    people: 'leads, customers, staff, and prospects',
+    action: 'increase qualified inquiries, improve operations, and move prospects toward the right offer',
+    demo: 'Your demo should speak in business terms: leads, sales conversations, customer journey, operations, revenue, and conversion.',
   },
-  followUp: {
-    title: 'Follow-Up System',
-    summary: 'A simple tracking and assignment system so leads, visitors, clients, volunteers, or participants do not fall through the cracks.',
-    package: 'Starter Follow-Up or Growth Follow-Up',
-    next: 'Map my follow-up process',
+  church: {
+    label: 'Church / Ministry',
+    people: 'visitors, members, volunteers, ministry teams, and families',
+    action: 'strengthen communication, follow-up, discipleship, care, and next steps',
+    demo: 'Your demo should speak in ministry terms: visitors, discipleship, care, serving, prayer, leadership, and member engagement.',
   },
-  messaging: {
-    title: 'Messaging World Build',
-    summary: 'A private mobile-first community hub in WhatsApp, Telegram, or both for communication, resources, onboarding, and engagement.',
-    package: 'Starter or Growth Messaging World',
-    next: 'Build my messaging world',
+  nonprofit: {
+    label: 'Nonprofit',
+    people: 'participants, volunteers, donors, staff, and community partners',
+    action: 'improve engagement, volunteer coordination, participant support, and impact tracking',
+    demo: 'Your demo should speak in nonprofit terms: mission, volunteers, participants, donors, impact, services, and support.',
   },
-  development: {
-    title: 'PurposePath / GrowthPath System',
-    summary: 'A development pathway that helps people discover their why, understand their wiring, and grow through clear next steps.',
-    package: 'PurposePath Workshop or GrowthPath Starter',
-    next: 'Explore development systems',
+  school: {
+    label: 'School / Youth Program',
+    people: 'students, parents, staff, mentors, and program participants',
+    action: 'support student growth, family communication, mentorship, engagement, and progress visibility',
+    demo: 'Your demo should speak in education terms: students, parents, growth, mentorship, attendance, character, progress, and readiness.',
+  },
+  creator: {
+    label: 'Coach / Creator',
+    people: 'clients, subscribers, members, prospects, and community followers',
+    action: 'grow a community, qualify clients, deliver resources, and guide people into the right offer',
+    demo: 'Your demo should speak in creator terms: audience, clients, members, content, offers, community, and accountability.',
   },
 }
 
-function getRecommendation(answers: Answers) {
-  if (answers.problem === 'website') return recommendations.website
-  if (answers.problem === 'follow-up') return recommendations.followUp
-  if (answers.problem === 'messaging') return recommendations.messaging
-  if (answers.problem === 'development') return recommendations.development
-  return null
+function getRecommendation(answers: Answers): Recommendation | null {
+  const industry = industryLanguage[answers.orgType]
+  if (!industry || !answers.problem) return null
+
+  const base = {
+    website: {
+      title: `${industry.label} LaunchSite`,
+      summary: `A clean website or landing page designed for your ${industry.label.toLowerCase()} audience so ${industry.people} can understand the offer and take the right next step.`,
+      package: 'Starter or Growth LaunchSite',
+      next: 'Request a website quote',
+    },
+    'follow-up': {
+      title: `${industry.label} Follow-Up System`,
+      summary: `A simple system to track ${industry.people}, assign next steps, and make sure important people and opportunities do not fall through the cracks.`,
+      package: 'Starter Follow-Up or Growth Follow-Up',
+      next: 'Map my follow-up process',
+    },
+    messaging: {
+      title: `${industry.label} Messaging World`,
+      summary: `A private mobile-first communication hub in WhatsApp, Telegram, or both to help you ${industry.action}.`,
+      package: 'Starter or Growth Messaging World',
+      next: 'Build my messaging world',
+    },
+    development: {
+      title: `${industry.label} Growth System`,
+      summary: `A growth and development pathway that helps ${industry.people} understand where they are, what they need next, and how to move forward with support.`,
+      package: 'PurposePath Workshop or GrowthPath Starter',
+      next: 'Explore development systems',
+    },
+  }
+
+  const selected = base[answers.problem as keyof typeof base]
+  return { ...selected, demoLanguage: industry.demo }
 }
 
 export function QualifierDemo() {
@@ -53,17 +94,18 @@ export function QualifierDemo() {
     <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
       <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
         <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Smart Qualifier Demo</p>
-        <h2 className="mt-4 text-3xl font-bold">Tell us what you are trying to solve.</h2>
+        <h2 className="mt-4 text-3xl font-bold">Tell us your industry first.</h2>
+        <p className="mt-3 text-sm leading-6 text-zinc-400">The system stays the same. The wording changes to fit the world your buyer lives in.</p>
         <div className="mt-8 space-y-5">
           <label className="block">
-            <span className="text-sm font-semibold text-zinc-300">What type of organization are you?</span>
+            <span className="text-sm font-semibold text-zinc-300">What industry are you in?</span>
             <select
               className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-900 px-4 py-3 text-white"
               value={answers.orgType}
               onChange={(event) => setAnswers({ ...answers, orgType: event.target.value })}
             >
               <option value="">Select one</option>
-              <option value="business">Business</option>
+              <option value="business">Business / Corporate</option>
               <option value="church">Church / Ministry</option>
               <option value="nonprofit">Nonprofit</option>
               <option value="school">School / Youth Program</option>
@@ -109,6 +151,10 @@ export function QualifierDemo() {
             <h3 className="text-4xl font-black">{recommendation.title}</h3>
             <p className="mt-4 text-lg leading-8 text-zinc-200">{recommendation.summary}</p>
             <div className="mt-6 rounded-2xl border border-white/10 bg-zinc-950/60 p-5">
+              <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">Demo language direction</p>
+              <p className="mt-2 text-sm leading-6 text-zinc-200">{recommendation.demoLanguage}</p>
+            </div>
+            <div className="mt-4 rounded-2xl border border-white/10 bg-zinc-950/60 p-5">
               <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">Best starting package</p>
               <p className="mt-2 text-xl font-bold text-white">{recommendation.package}</p>
             </div>
@@ -118,8 +164,8 @@ export function QualifierDemo() {
           </div>
         ) : (
           <div className="mt-5">
-            <h3 className="text-4xl font-black">Your best-fit solution will appear here.</h3>
-            <p className="mt-4 text-lg leading-8 text-zinc-300">Choose the options on the left and this demo will recommend the best GGI Solutions starting point.</p>
+            <h3 className="text-4xl font-black">Your best-fit demo will appear here.</h3>
+            <p className="mt-4 text-lg leading-8 text-zinc-300">Choose an industry and need. The recommendation will adapt the wording to match that world.</p>
           </div>
         )}
       </div>
