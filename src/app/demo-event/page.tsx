@@ -3,15 +3,15 @@ import Link from 'next/link'
 const details = [
   { label: 'Date', value: 'Saturday, June 15' },
   { label: 'Time', value: '6:00 PM' },
-  { label: 'Location', value: 'Your Venue Name' },
-  { label: 'Hosted by', value: 'Your Organization' },
+  { label: 'Location', value: 'Venue Name' },
+  { label: 'Hosted by', value: 'Organization Name' },
 ]
 
 const expectations = [
   'Clear event details in one place',
   'Mobile-friendly registration experience',
   'Easy share link for flyers and social media',
-  'Simple follow-up list after the event',
+  'Simple attendee list after the event',
 ]
 
 export default function DemoEventPage() {
@@ -19,14 +19,14 @@ export default function DemoEventPage() {
     <main className="min-h-screen bg-zinc-950 text-white">
       <section className="mx-auto max-w-6xl px-6 py-20">
         <nav className="mb-16 flex items-center justify-between">
-          <Link href="/" className="font-bold tracking-tight">GGI Event Page</Link>
+          <Link href="/" className="font-bold tracking-tight">Event Landing Page Template</Link>
           <Link href="#register" className="rounded-full bg-amber-300 px-5 py-2 text-sm font-bold text-zinc-950">Register</Link>
         </nav>
 
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">Featured Event</p>
-            <h1 className="mt-6 text-5xl font-black tracking-tight sm:text-7xl">Your Event Title Goes Here</h1>
+            <h1 className="mt-6 text-5xl font-black tracking-tight sm:text-7xl">Event Title Goes Here</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
               Use this section to clearly explain the promise of the event. Who is it for? Why should they come? What will they experience?
             </p>
@@ -67,7 +67,7 @@ export default function DemoEventPage() {
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">Registration</p>
           <h2 className="mt-5 text-4xl font-bold">Save your spot today.</h2>
-          <p className="mt-5 text-zinc-300">This form can connect to Google Forms, Formspree, Supabase, Airtable, or your preferred registration system.</p>
+          <p className="mt-5 text-zinc-300">This form can connect to Google Forms, Formspree, Supabase, Airtable, or the client’s preferred registration system.</p>
         </div>
         <form className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 space-y-4">
           <input className="w-full rounded-xl bg-zinc-900 px-4 py-3" placeholder="Full name" />
