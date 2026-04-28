@@ -20,28 +20,42 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#050816] text-white">
       <section className="mx-auto max-w-6xl px-6 py-10 sm:py-16">
-        <nav className="mb-16 flex items-center justify-between rounded-full border border-white/10 bg-white/[0.06] px-5 py-3 shadow-sm backdrop-blur">
+        <nav className="mb-12 flex items-center justify-between rounded-full border border-white/10 bg-white/[0.06] px-5 py-3 shadow-sm backdrop-blur">
           <Link href="/" className="text-lg font-black tracking-tight">GGI Solutions</Link>
           <div className="hidden gap-6 text-sm text-slate-300 md:flex">
+            <a href="#welcome" className="hover:text-white">Welcome</a>
             <a href="#mockup" className="hover:text-white">Mockup</a>
             <a href="#interactive" className="hover:text-white">Try It</a>
             <a href="#offers" className="hover:text-white">Offers</a>
-            <Link href="/services" className="hover:text-white">Services</Link>
             <Link href="/contact" className="hover:text-white">Contact</Link>
           </div>
         </nav>
 
-        <div className="mx-auto max-w-5xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">GGI Solutions</p>
-          <h1 className="mt-6 text-5xl font-black tracking-tight sm:text-7xl">Simple digital systems that help people move forward.</h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-            We build interactive websites, event pages, messaging worlds, and follow-up systems for organizations that want people to feel seen, guided, and supported.
-          </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="#mockup" className="rounded-full bg-cyan-400 px-7 py-3 font-bold text-slate-950 shadow-sm hover:bg-cyan-300">See Product Mockup</a>
-            <a href="#interactive" className="rounded-full border border-white/15 bg-white/[0.06] px-7 py-3 font-semibold text-white hover:border-cyan-300">Try the Interactive Demo</a>
+        <section id="welcome" className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">Welcome to the Hub</p>
+            <h1 className="mt-6 text-5xl font-black tracking-tight sm:text-7xl">Let’s build the right system for where you are.</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+              GGI Solutions builds interactive websites, event pages, messaging worlds, and follow-up systems that help people feel seen, guided, and supported.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a href="#video" className="rounded-full bg-cyan-400 px-7 py-3 font-bold text-slate-950 shadow-sm hover:bg-cyan-300">Watch Welcome</a>
+              <a href="#interactive" className="rounded-full border border-white/15 bg-white/[0.06] px-7 py-3 font-semibold text-white hover:border-cyan-300">Find My Best Solution</a>
+            </div>
           </div>
-        </div>
+
+          <div id="video" className="rounded-[2rem] border border-cyan-300/20 bg-gradient-to-br from-cyan-400/15 via-white/[0.06] to-violet-500/20 p-4 shadow-2xl shadow-black/40">
+            <div className="relative aspect-video overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#02040d]">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,211,238,0.35),transparent_35%),radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.35),transparent_35%)]" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
+                <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-cyan-400 text-3xl font-black text-slate-950 shadow-lg shadow-cyan-400/30">▶</div>
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200">Video Placeholder</p>
+                <h2 className="mt-3 text-3xl font-black">Welcome to GGI Solutions</h2>
+                <p className="mt-3 max-w-xl text-sm leading-6 text-slate-300">Add your welcome video here. This section is built for a short founder message that helps people feel guided before they choose a solution.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <div className="mx-auto mt-16 max-w-4xl rounded-[2rem] border border-white/10 bg-white/[0.06] p-8 shadow-sm">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-violet-300">What makes this different?</p>
