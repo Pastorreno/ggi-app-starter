@@ -8,6 +8,24 @@ const offers = [
   'Simple follow-up systems so nobody gets missed',
 ]
 
+const videos = [
+  {
+    title: 'Welcome to the Hub',
+    description: 'A short founder message that helps visitors understand the heart behind GGI Solutions.',
+    embed: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  },
+  {
+    title: 'How Smart Websites Work',
+    description: 'Show how a website, qualifier, messaging world, and follow-up system connect together.',
+    embed: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  },
+  {
+    title: 'Why Follow-Up Matters',
+    description: 'Explain why organizations need systems that keep people from falling through the cracks.',
+    embed: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  },
+]
+
 const packages = [
   { name: 'LaunchSite', price: '$500+', description: 'A clean website or landing page built to help visitors understand and respond.' },
   { name: 'Event LaunchPage', price: '$199+', description: 'A quick-turnaround page for events, registration, RSVP, and promotion.' },
@@ -24,6 +42,7 @@ export default function Home() {
           <Link href="/" className="text-lg font-black tracking-tight">GGI Solutions</Link>
           <div className="hidden gap-6 text-sm text-slate-300 md:flex">
             <a href="#welcome" className="hover:text-white">Welcome</a>
+            <a href="#clips" className="hover:text-white">Videos</a>
             <a href="#mockup" className="hover:text-white">Mockup</a>
             <a href="#interactive" className="hover:text-white">Try It</a>
             <a href="#offers" className="hover:text-white">Offers</a>
@@ -39,20 +58,20 @@ export default function Home() {
               GGI Solutions builds interactive websites, event pages, messaging worlds, and follow-up systems that help people feel seen, guided, and supported.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href="#video" className="rounded-full bg-cyan-400 px-7 py-3 font-bold text-slate-950 shadow-sm hover:bg-cyan-300">Watch Welcome</a>
+              <a href="#clips" className="rounded-full bg-cyan-400 px-7 py-3 font-bold text-slate-950 shadow-sm hover:bg-cyan-300">Watch the Hub</a>
               <a href="#interactive" className="rounded-full border border-white/15 bg-white/[0.06] px-7 py-3 font-semibold text-white hover:border-cyan-300">Find My Best Solution</a>
             </div>
           </div>
 
           <div id="video" className="rounded-[2rem] border border-cyan-300/20 bg-gradient-to-br from-cyan-400/15 via-white/[0.06] to-violet-500/20 p-4 shadow-2xl shadow-black/40">
-            <div className="relative aspect-video overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#02040d]">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,211,238,0.35),transparent_35%),radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.35),transparent_35%)]" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
-                <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-cyan-400 text-3xl font-black text-slate-950 shadow-lg shadow-cyan-400/30">▶</div>
-                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200">Video Placeholder</p>
-                <h2 className="mt-3 text-3xl font-black">Welcome to GGI Solutions</h2>
-                <p className="mt-3 max-w-xl text-sm leading-6 text-slate-300">Add your welcome video here. This section is built for a short founder message that helps people feel guided before they choose a solution.</p>
-              </div>
+            <div className="aspect-video overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#02040d]">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Welcome to GGI Solutions"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
             </div>
           </div>
         </section>
@@ -65,6 +84,31 @@ export default function Home() {
               <li key={offer} className="flex gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-cyan-300" />{offer}</li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section id="clips" className="border-y border-white/10 bg-[#0b1026] px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">Watch the Hub in Action</p>
+          <h2 className="mt-5 max-w-3xl text-4xl font-bold">Short clips that explain what we build.</h2>
+          <p className="mt-5 max-w-3xl text-slate-300">Use these video spaces for your welcome message, product explanation, client demos, or service breakdowns.</p>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {videos.map((video) => (
+              <div key={video.title} className="rounded-3xl border border-white/10 bg-white/[0.06] p-4 shadow-2xl shadow-black/20">
+                <div className="aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black">
+                  <iframe
+                    className="h-full w-full"
+                    src={video.embed}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+                <h3 className="mt-5 text-xl font-bold">{video.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{video.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
