@@ -1,54 +1,119 @@
 import Link from 'next/link'
 import { OfferCard } from '@/components/ggi/OfferCard'
 
+const developmentSystems = [
+  'Free 2 Grow — kids and youth development',
+  'PurposePath OS — why, wiring, and identity discovery',
+  'GrowthPath OS — structured growth and progress',
+  'LeaderRise OS — future leadership development',
+]
+
+const websitePackages = [
+  { name: 'Starter LaunchSite', price: '$500+', description: 'A clean one-page website for a business, ministry, program, or personal brand.' },
+  { name: 'Growth Website', price: '$1,500+', description: 'A multi-page site with clear messaging, services, and inquiry flow.' },
+  { name: 'System Website', price: '$3,500+', description: 'A website connected to forms, follow-up, messaging, or simple dashboards.' },
+]
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-zinc-950 text-white">
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="max-w-3xl">
+        <nav className="mb-20 flex items-center justify-between">
+          <Link href="/" className="text-xl font-black tracking-tight">GGI Solutions</Link>
+          <div className="hidden gap-6 text-sm text-zinc-300 md:flex">
+            <a href="#services" className="hover:text-white">Services</a>
+            <a href="#development" className="hover:text-white">Development</a>
+            <a href="#websites" className="hover:text-white">Websites</a>
+            <Link href="/contact" className="hover:text-white">Contact</Link>
+          </div>
+        </nav>
+
+        <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">GGI Solutions</p>
-          <h1 className="mt-6 text-5xl font-bold tracking-tight sm:text-7xl">Digital systems that solve real problems.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-            We help churches, nonprofits, businesses, events, and community organizations launch mobile-first tools that improve communication,
-            follow-up, onboarding, and growth without replacing human leadership.
+          <h1 className="mt-6 text-5xl font-bold tracking-tight sm:text-7xl">Digital systems that move people forward.</h1>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
+            We build websites, messaging worlds, follow-up systems, and growth development tools for churches, nonprofits, businesses, events, and community organizations.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="/church-follow-up" className="rounded-xl bg-amber-300 px-6 py-3 font-bold text-zinc-950 hover:bg-amber-200">
-              See Church System
+            <Link href="/contact" className="rounded-xl bg-amber-300 px-6 py-3 font-bold text-zinc-950 hover:bg-amber-200">
+              Start a Project
             </Link>
-            <Link href="/event-pages" className="rounded-xl border border-white/15 px-6 py-3 font-semibold hover:border-white/40">
-              Build My Event Page
-            </Link>
+            <a href="#services" className="rounded-xl border border-white/15 px-6 py-3 font-semibold hover:border-white/40">
+              View Services
+            </a>
           </div>
         </div>
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2">
+        <div id="services" className="mt-20 grid gap-8 md:grid-cols-3">
           <OfferCard
-            eyebrow="Recurring Revenue Offer"
-            title="Church Follow-Up System"
-            description="A simple AI-assisted follow-up system for visitor care, next steps, dashboards, and leader visibility."
+            eyebrow="Digital Front Door"
+            title="LaunchSite Websites"
+            description="Clean websites and landing pages built to capture attention, inquiries, bookings, registrations, and next steps."
+            href="#websites"
+            cta="See Website Packages"
+            bullets={[
+              'One-page and multi-page sites',
+              'Lead capture and inquiry forms',
+              'Event and campaign pages',
+              'Built to connect into follow-up',
+            ]}
+          />
+          <OfferCard
+            eyebrow="Communication Systems"
+            title="Messaging World Builds"
+            description="Private mobile-first communities and communication hubs built in WhatsApp, Telegram, or both."
+            href="/contact"
+            cta="Build a Messaging World"
+            bullets={[
+              'Channels, groups, and communities',
+              'Welcome flows and pinned resources',
+              'Admin structure and launch support',
+              'Optional bots and automation plans',
+            ]}
+          />
+          <OfferCard
+            eyebrow="Relationship Systems"
+            title="Follow-Up Systems"
+            description="Simple systems that help organizations track leads, visitors, clients, participants, and next steps."
             href="/church-follow-up"
-            cta="View Offer"
+            cta="See Follow-Up System"
             bullets={[
-              'Visitor intake + follow-up tracking',
-              'Leader dashboard visibility',
-              'Care needs and next-step workflow',
-              'Built for churches of any size',
+              'Contact intake and tracking',
+              'Assignments and reminders',
+              'Status flags and notes',
+              'Dashboards and reporting',
             ]}
           />
-          <OfferCard
-            eyebrow="Fast Cash Offer"
-            title="Event Landing Pages"
-            description="Professional event pages for churches, concerts, conferences, community groups, and local businesses."
-            href="/event-pages"
-            cta="Launch My Event Page"
-            bullets={[
-              'Fast one-page launch sites',
-              'RSVP or registration forms',
-              'Shareable mobile-friendly links',
-              'Promo add-ons available',
-            ]}
-          />
+        </div>
+      </section>
+
+      <section id="development" className="border-y border-white/10 bg-white/[0.03] px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">Development Ecosystem</p>
+          <h2 className="mt-5 max-w-3xl text-4xl font-bold">Systems for identity, growth, development, and future leadership.</h2>
+          <div className="mt-10 grid gap-4 md:grid-cols-4">
+            {developmentSystems.map((system) => (
+              <div key={system} className="rounded-2xl border border-white/10 bg-zinc-950/70 p-5 text-sm leading-6 text-zinc-300">{system}</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="websites" className="mx-auto max-w-6xl px-6 py-20">
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">Websites</p>
+        <h2 className="mt-5 max-w-3xl text-4xl font-bold">Websites that act as digital front doors.</h2>
+        <p className="mt-5 max-w-3xl text-zinc-300">A website should do more than look good. It should move visitors toward a clear next step: inquire, book, register, join, or connect.</p>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {websitePackages.map((pkg) => (
+            <div key={pkg.name} className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
+              <h3 className="text-xl font-bold">{pkg.name}</h3>
+              <p className="mt-3 text-3xl font-black text-amber-300">{pkg.price}</p>
+              <p className="mt-4 text-sm leading-6 text-zinc-300">{pkg.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10">
+          <Link href="/contact" className="rounded-xl bg-amber-300 px-6 py-3 font-bold text-zinc-950 hover:bg-amber-200">Request Website Quote</Link>
         </div>
       </section>
     </main>
