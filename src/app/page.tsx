@@ -24,6 +24,7 @@ export default function Home() {
             <a href="#services" className="hover:text-white">Services</a>
             <a href="#development" className="hover:text-white">Development</a>
             <a href="#websites" className="hover:text-white">Websites</a>
+            <Link href="/qualifier" className="hover:text-white">Solution Finder</Link>
             <Link href="/contact" className="hover:text-white">Contact</Link>
           </div>
         </nav>
@@ -32,16 +33,23 @@ export default function Home() {
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">GGI Solutions</p>
           <h1 className="mt-6 text-5xl font-bold tracking-tight sm:text-7xl">Digital systems that move people forward.</h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
-            We build websites, messaging worlds, follow-up systems, and growth development tools for churches, nonprofits, businesses, events, and community organizations.
+            We build websites, messaging worlds, follow-up systems, smart qualifiers, and growth development tools for churches, nonprofits, businesses, events, and community organizations.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-xl bg-amber-300 px-6 py-3 font-bold text-zinc-950 hover:bg-amber-200">
+            <Link href="/qualifier" className="rounded-xl bg-amber-300 px-6 py-3 font-bold text-zinc-950 hover:bg-amber-200">
+              Find My Best Solution
+            </Link>
+            <Link href="/contact" className="rounded-xl border border-white/15 px-6 py-3 font-semibold hover:border-white/40">
               Start a Project
             </Link>
-            <a href="#services" className="rounded-xl border border-white/15 px-6 py-3 font-semibold hover:border-white/40">
-              View Services
-            </a>
           </div>
+        </div>
+
+        <div className="mt-16 rounded-3xl border border-amber-300/30 bg-amber-300/10 p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-200">Smart Website Demo</p>
+          <h2 className="mt-4 text-3xl font-bold">Not sure what you need? Let the site qualify you.</h2>
+          <p className="mt-4 max-w-3xl text-zinc-300">Our Solution Finder shows how a website can guide visitors, recommend the right service, and turn interest into a better lead before the first conversation.</p>
+          <Link href="/qualifier" className="mt-8 inline-flex rounded-xl bg-amber-300 px-6 py-3 font-bold text-zinc-950 hover:bg-amber-200">Try the Solution Finder</Link>
         </div>
 
         <div id="services" className="mt-20 grid gap-8 md:grid-cols-3">
@@ -59,16 +67,16 @@ export default function Home() {
             ]}
           />
           <OfferCard
-            eyebrow="Communication Systems"
-            title="Messaging World Builds"
-            description="Private mobile-first communities and communication hubs built in WhatsApp, Telegram, or both."
-            href="/contact"
-            cta="Build a Messaging World"
+            eyebrow="Smart Sales Systems"
+            title="Custom Qualifiers"
+            description="Interactive website experiences that ask questions, recommend services, and help pre-qualify leads."
+            href="/qualifier"
+            cta="View Demo"
             bullets={[
-              'Channels, groups, and communities',
-              'Welcome flows and pinned resources',
-              'Admin structure and launch support',
-              'Optional bots and automation plans',
+              'Guided questions and recommendations',
+              'Better lead quality before calls',
+              'Perfect for service businesses',
+              'Can connect to forms and follow-up',
             ]}
           />
           <OfferCard
@@ -112,8 +120,9 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="mt-10">
+        <div className="mt-10 flex flex-wrap gap-4">
           <Link href="/contact" className="rounded-xl bg-amber-300 px-6 py-3 font-bold text-zinc-950 hover:bg-amber-200">Request Website Quote</Link>
+          <Link href="/qualifier" className="rounded-xl border border-white/15 px-6 py-3 font-semibold hover:border-white/40">Try Solution Finder</Link>
         </div>
       </section>
     </main>
