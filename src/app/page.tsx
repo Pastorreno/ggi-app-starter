@@ -6,11 +6,11 @@ export default function Home() {
     <main className="min-h-screen bg-zinc-950 text-white">
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">GGI Hub</p>
-          <h1 className="mt-6 text-5xl font-bold tracking-tight sm:text-7xl">AI systems that solve real problems.</h1>
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">GGI Solutions</p>
+          <h1 className="mt-6 text-5xl font-bold tracking-tight sm:text-7xl">Digital systems that solve real problems.</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-            We help churches, nonprofits, events, and local organizations launch modern tools that increase follow-up,
-            visibility, and growth without replacing human leadership.
+            We help churches, nonprofits, businesses, events, and community organizations launch mobile-first tools that improve communication,
+            follow-up, onboarding, and growth without replacing human leadership.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/church-follow-up" className="rounded-xl bg-amber-300 px-6 py-3 font-bold text-zinc-950 hover:bg-amber-200">
